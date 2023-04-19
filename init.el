@@ -32,6 +32,7 @@
 (require 'init-icons)
 (require 'init-company)
 (require 'init-tools)
+(require 'init-theme)
 
 
 
