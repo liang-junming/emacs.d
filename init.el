@@ -1,7 +1,3 @@
-
-
-
-
 ;;
 ;;
 ;;
@@ -35,6 +31,7 @@
 (require 'init-dashboard)
 (require 'init-icons)
 (require 'init-company)
+(require 'init-tools)
 
 
 
