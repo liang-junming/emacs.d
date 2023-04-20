@@ -51,14 +51,13 @@
    ("M-g G" . consult-git-grep)
    ("M-g r" . consult-ripgrep)
    ("C-c s" . consult-line)
+   ("C-c S" . consult-line-multi)
    :map isearch-mode-map
    ("M-e" . consult-isearch-history)         ;; orig. isearch-edit-string
    ("M-s e" . consult-isearch-history)       ;; orig. isearch-edit-string
-   ("M-s l" . consult-line)                  ;; needed by consult-line to detect isearch
-   ("M-s L" . consult-line-multi)            ;; needed by consult-line to detect isearch
    ;; Minibuffer history
    :map minibuffer-local-map
-   ("M-s" . consult-history)                 ;; orig. next-matching-history-element
+   ("C-r" . consult-history)                 ;;
    ("M-r" . consult-history)                ;; orig. previous-matching-history-element
   )
   
