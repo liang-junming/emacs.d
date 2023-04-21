@@ -10,6 +10,9 @@
 ;; 高亮光标所在行
 (global-hl-line-mode +1)
 
+;; 记录并回到上一次文件打开的位置
+(save-place-mode 1)
+
 ;;pp 更改字体大小 15
 (set-face-attribute 'default nil :font "Courier 15")
 ;; 加粗
