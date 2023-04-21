@@ -41,5 +41,22 @@
   :config
   (avy-setup-default))
 
+(use-package which-key
+  :ensure t
+  :custom
+  (which-key-popup-type 'side-window)
+  :config
+  (which-key-mode))
+
+(use-package hungry-delete
+  :ensure t
+  :hook ('prog-mode . 'global-hungry-delete-mode))
+
+(use-package smartparens
+  :ensure t
+  :config
+  (add-hook 'emacs-lisp-mode-hook 'smartparens-strict-mode)
+  (add-hook 'prog-mode-hook 'smartparens-strict-mode))
+
 
 (provide 'init-tools)
