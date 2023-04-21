@@ -28,5 +28,18 @@
     (make-variable-buffer-local 'undo-tree-visualizer-diff)
     (setq-default undo-tree-visualizer-diff t)))
 
+(use-package avy
+  :ensure t
+  :init
+  (setq avy-keys '(?a ?o ?e ?u ?h ?t ?n ?s))
+  :bind (("C-c a c" . avy-goto-char)
+	 ("C-c a C" . avy-goto-char-2)
+	 ("C-c a l" . avy-goto-line)
+	 ("C-c a w" . avy-goto-word-1)
+	 ("C-c a W" . avy-goto-word-0)
+	 ("C-c a r" . avy-resume))
+  :config
+  (avy-setup-default))
+
 
 (provide 'init-tools)
