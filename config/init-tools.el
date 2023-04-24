@@ -8,13 +8,6 @@
   :ensure t
   :bind (("C-c l" . goto-last-change)))
 
-(use-package evil
-  :ensure t
-  :init
-  (setq evil-want-C-u-scroll 1)
-  :config
-  (evil-mode 1))
-
 (use-package undo-tree
   :ensure t
   :hook (after-init . global-undo-tree-mode)
@@ -45,6 +38,9 @@
   :ensure t
   :custom
   (which-key-popup-type 'side-window)
+  (which-key-idle-delay 0.5)
+  (which-key-idle-secondary-delay 0)
+  (which-key-side-window-max-height 0.4)
   :config
   (which-key-mode))
 
