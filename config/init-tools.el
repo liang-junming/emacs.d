@@ -1,3 +1,6 @@
+;;; package --- init-tools
+;;; Commentary:
+;;; Code:
 (use-package magit
   :ensure t)
 
@@ -56,3 +59,4 @@
 
 
 (provide 'init-tools)
+;;; init-tools.el ends here

@@ -1,3 +1,6 @@
+;;; package --- init-base
+;;; Commentary:
+;;; Code:
 ;; 关闭工具栏
 (tool-bar-mode -1)
 
@@ -58,40 +61,14 @@
   scroll-preserve-screen-position 'always)
 
 ;; 让'_'被视为单词的一部分
-(add-hook 'after-change-major-mode-hook (lambda () 
+(add-hook 'after-change-major-mode-hook (lambda ()
                                           (modify-syntax-entry ?_ "w")))
 ;; "-" 同上)
-(add-hook 'after-change-major-mode-hook (lambda () 
+(add-hook 'after-change-major-mode-hook (lambda ()
                                           (modify-syntax-entry ?- "w")))
 
 ;; 去除默认启动界面
 (setq inhibit-startup-message nil)
-
-;; 设置F12开启全屏
-(defun fullscreen ()
-  (interactive)
-  (set-frame-parameter nil 'fullscreen
-                       (if (frame-parameter nil 'fullscreen) nil 'fullboth)))
-
-(global-set-key [f12] 'fullscreen)
-
-;; 半透明
-(global-set-key [(f8)] 'loop-alpha)  ;;注意这行中的F8 , 可以改成你想要的按键
-(setq alpha-list '((100 100) (85 55) (65 45) (55 35)))
-(defun loop-alpha ()
-  (interactive)
-  (let ((h (car alpha-list)))
-    ((lambda (a ab)
-       (set-frame-parameter (selected-frame) 'alpha (list a ab))
-       (add-to-list 'default-frame-alist (cons 'alpha (list a ab)))
-       ) (car h) (car (cdr h)))
-    (setq alpha-list (cdr (append alpha-list (list h))))
-    ))
-
-;;设置窗口位置
-;;(set-frame-position (selected-frame) 0 0)
-;;设置宽和高
-;;(set-frame-size (selected-frame) maximized maximized)
 
 ;; 窗口最大化
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -101,3 +78,4 @@
 ;;      mac-command-modifier 'meta)
 
 (provide 'init-base)
+;;; init-base.el ends here

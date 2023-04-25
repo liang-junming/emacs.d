@@ -1,5 +1,6 @@
-;;
-;;
+;;; package --- init-icons
+;;; Commentary:
+;;; Code:
 (use-package all-the-icons
   :ensure t)
 
@@ -14,3 +15,4 @@
   (all-the-icons-ivy-rich-mode 1))
 
 (provide 'init-icons)
+;;; init-icons.el ends here

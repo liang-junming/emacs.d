@@ -1,3 +1,6 @@
+;;; package --- init-lang-mode
+;;; Commentary:
+;;; Code:
 (use-package js2-mode
   :ensure t
   :custom
@@ -19,3 +22,4 @@
 
 
 (provide 'init-lang-mode)
+;;; init-lang-mode.el ends here

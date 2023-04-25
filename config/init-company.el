@@ -1,11 +1,12 @@
-;;
-;;
+;;; package --- init-company
+;;; Commentary:
+;;; Code:
 (use-package company
   :ensure t
   :init
   (setq company-idle-delay 0)
   (setq company-echo-delay 0)
-  (setq company-show-numbers t)
+  (setq company-show-quick-access t)
   (setq company-tooltip-limit 15)
   (setq company-minimum-prefix-length 1)
   (setq company-tooltip-align-annotations t)
@@ -19,3 +20,4 @@
 
 
 (provide 'init-company)
+;;; init-company.el ends here

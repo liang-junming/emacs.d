@@ -1,3 +1,6 @@
+;;; package --- init-ivy-swiper-counsel
+;;; Commentary:
+;;; Code:
 (use-package ivy
   :ensure t
   :init
@@ -84,6 +87,7 @@
 ;; 让ivy显示的内容更丰富
 (use-package ivy-rich
   :ensure t
+  :functions ivy-format-function-line
   :config
   (ivy-rich-mode 1)
   (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
@@ -145,3 +149,4 @@
 
 
 (provide 'init-ivy-swiper-counsel)
+;;; init-ivy-swiper-counsel.el ends here

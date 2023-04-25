@@ -1,3 +1,6 @@
+;;; package --- init-lsp
+;;; Commentary:
+;;; Code:
 (use-package lsp-mode
   :ensure t
   :init
@@ -40,3 +43,4 @@
 
 
 (provide 'init-lsp)
+;;; init-lsp.el ends here
