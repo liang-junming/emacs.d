@@ -7,3 +7,7 @@ recentf
 transient
 places
 projects
+.cache
+.dap-breakpoints
+eclipse.jdt.ls
+workspace
