@@ -42,6 +42,9 @@
   :config
   (ivy-mode 1))
 
+(use-package ivy-hydra
+  :ensure t)
+
 (use-package swiper
   :ensure t
   :bind (("C-s" . swiper)))
