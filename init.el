@@ -1,6 +1,8 @@
 ;;
 ;;
 ;;
+(add-to-list 'image-types 'svg)
+
 (setq gc-cons-threshold most-negative-fixnum)
 (setq file-name-handler-alist nil)
 
@@ -34,6 +36,7 @@
 (require 'init-tools)
 (require 'init-theme)
 (require 'init-lsp)
+(require 'init-lang-mode)
 
 
 ;; 以下代码是emacs自动添加
@@ -42,11 +45,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(lsp-ivy lsp-ui smartparens hungry-delete which-key undo-tree company-box company all-the-icons-dired all-the-icons-ivy-rich all-the-icons dashboard use-package ivy-rich counsel-projectile)))
+ '(package-selected-packages '(dap-mode lsp-java company use-package))
+ '(warning-suppress-log-types '((use-package) (use-package)))
+ '(warning-suppress-types '((use-package) (use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0 :foreground "red")))))
