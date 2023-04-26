@@ -38,6 +38,7 @@
 (require 'init-lsp)
 (require 'init-lang-mode)
 (require 'init-flycheck)
+(require 'init-translate)
 
 
 ;; 以下代码是emacs自动添加
@@ -46,7 +47,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(flycheck dap-mode lsp-java company use-package))
+ '(package-selected-packages
+   '(go-translate flycheck dap-mode lsp-java company use-package))
  '(warning-suppress-log-types '((use-package) (use-package)))
  '(warning-suppress-types '((use-package) (use-package))))
 (custom-set-faces

@@ -77,8 +77,7 @@
 	 ("C-c b" . counsel-bookmark)
 	 ("C-c d" . counsel-descbinds)
 	 ("C-c o" . counsel-outline)
-	 ("C-c t" . counsel-load-theme)
-	 ("C-c F" . counsel-org-file)))
+     ("C-c F" . counsel-org-file)))
 
 (use-package counsel-projectile
   :ensure t
