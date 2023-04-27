@@ -39,6 +39,7 @@
 (require 'init-lang-mode)
 (require 'init-flycheck)
 (require 'init-translate)
+(require 'init-meow)
 
 
 ;; 以下代码是emacs自动添加
