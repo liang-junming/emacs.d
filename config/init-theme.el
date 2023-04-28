@@ -180,6 +180,8 @@
   (setq doom-modeline-before-update-env-hook nil)
   (setq doom-modeline-after-update-env-hook nil)
   :config
+  (doom-modeline-def-segment minor-modes
+    (format-mode-line (and (bound-and-true-p company-mode) company-lighter)))
   (doom-modeline-mode 1))
 
 
