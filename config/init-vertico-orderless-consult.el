@@ -1,3 +1,6 @@
+;;; package --- init-vertico-orderless-consult
+;;; Commentary:
+;;; Code:
 ;; 增强 minibuffer
 (use-package vertico
   :ensure t
@@ -45,11 +48,11 @@
    ("C-x 5 b" . consult-buffer-other-frame)  ;; orig. switch-to-buffer-other-frame
    ("C-x r b" . consult-bookmark)            ;; orig. bookmark-jump
    ("M-y" . consult-yank-pop)                ;; orig. yank-pop
-   ("M-g i" . consult-imenu)
-   ("M-g o" . consult-outline)               ;; Alternative: consult-org-heading
-   ("M-g g" . consult-grep)
-   ("M-g G" . consult-git-grep)
-   ("M-g r" . consult-ripgrep)
+   ("C-c i" . consult-imenu)
+   ("C-c o" . consult-outline)               ;; Alternative: consult-org-heading
+   ("C-c G" . consult-grep)
+   ("C-c g" . consult-git-grep)
+   ("C-c r" . consult-ripgrep)
    ("C-c s" . consult-line)
    ("C-c S" . consult-line-multi)
    :map isearch-mode-map
@@ -160,3 +163,4 @@
 
 
 (provide 'init-vertico-orderless-consult)
+;;; init-vertico-orderless-consult.el ends here
