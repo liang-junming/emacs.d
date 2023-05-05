@@ -128,6 +128,13 @@
   ;; (setq consult-project-function nil)
   )
 
+(use-package consult-projectile
+  :ensure t
+  :bind
+  (
+   ("C-x p p" . consult-projectile-switch-project) ;; origin project-switch-project
+   ))
+
 ;; 提供更多的 action
 (use-package embark
   :ensure t
