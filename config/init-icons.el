@@ -1,5 +1,6 @@
-;;
-;;
+;;; package --- init-icons
+;;; Commentary:
+;;; Code:
 (use-package all-the-icons
   :ensure t)
 
@@ -10,3 +11,4 @@
 
 
 (provide 'init-icons)
+;;; init-icons.el ends here

@@ -1,3 +1,6 @@
+;;; package --- init-ivy-swiper-counsel
+;;; Commentary:
+;;; Code:
 (use-package ivy
   :ensure t
   :init
@@ -39,6 +42,9 @@
   :config
   (ivy-mode 1))
 
+(use-package ivy-hydra
+  :ensure t)
+
 (use-package swiper
   :ensure t
   :bind (("C-s" . swiper)))
@@ -57,12 +63,12 @@
 	 ("<f2> j" . counsel-set-variable)
 	 ;; based interface to shell and system tools
 	 ("C-c c" . counsel-compile)
-	 ("C-c g" . counsel-git)
-	 ("C-c j" . counsel-git-grep)
-	 ("C-c L" . counsel-git-log)
-	 ("C-c k" . counsel-rg)
+	 ("C-c f" . counsel-git)
+     ("C-c n" . counsel-fzf)
+	 ("C-c g" . counsel-git-grep)
+     ("C-c G" . counsel-grep)
+	 ("C-c r" . counsel-rg)
 	 ("C-c m" . counsel-linux-app)
-	 ("C-c n" . counsel-fzf)
 	 ("C-x l" . counsel-locate)
 	 ("C-c J" . counsel-file-jump)
 	 ("C-S-o" . counsel-rhythmbox)
@@ -70,10 +76,8 @@
 	 ;; other commands
 	 ("C-c b" . counsel-bookmark)
 	 ("C-c d" . counsel-descbinds)
-	 ("C-c g" . counsel-git)
 	 ("C-c o" . counsel-outline)
-	 ("C-c t" . counsel-load-theme)
-	 ("C-c F" . counsel-org-file)))
+     ("C-c F" . counsel-org-file)))
 
 (use-package counsel-projectile
   :ensure t
@@ -85,6 +89,7 @@
 ;; 让ivy显示的内容更丰富
 (use-package ivy-rich
   :ensure t
+  :functions ivy-format-function-line
   :config
   (ivy-rich-mode 1)
   (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
@@ -144,20 +149,6 @@
 	   :predicate
 	   (lambda (cand) (get-buffer cand))))))
 
-;;(use-package ivy-posframe
-;;  :ensure t
-;;  :init
-;;  (ivy-posframe-mode 1)
-;;  :custom
-;;  (ivy-posframe-parameters
-;;   '((left-fringe . 8)
-;;     (right-fringe . 8)))
-;;  (ivy-posframe-height-alist
-;;        '((swiper . 20)
-;;          (t . 30)))
-;;  (ivy-posframe-display-functions-alist
-;;        '((swiper . ivy-display-function-fallback)
-;;          (t . ivy-posframe-display-at-frame-center))))
-
 
 (provide 'init-ivy-swiper-counsel)
+;;; init-ivy-swiper-counsel.el ends here
