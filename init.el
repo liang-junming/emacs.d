@@ -33,10 +33,10 @@
 (require 'init-vertico-orderless-consult)
 (require 'init-dashboard)
 (require 'init-icons)
-(require 'init-company)
+(require 'init-corfu)
 (require 'init-tools)
 (require 'init-theme)
-(require 'init-lsp)
+(require 'init-eglot)
 (require 'init-lang-mode)
 (require 'init-flycheck)
 (require 'init-translate)
@@ -50,7 +50,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(meow go-translate flycheck typescript-mode js2-mode lsp-ui lsp-mode doom-modeline doom-themes smartparens hungry-delete which-key avy undo-tree goto-last-change try magit company all-the-icons-dired all-the-icons dashboard embark-consult embark consult-projectile consult marginalia orderless vertico use-package)))
+   '(eglot meow go-translate flycheck typescript-mode js2-mode doom-modeline doom-themes smartparens hungry-delete which-key avy undo-tree goto-last-change try magit all-the-icons-dired all-the-icons dashboard embark-consult embark consult-projectile consult marginalia orderless vertico use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
