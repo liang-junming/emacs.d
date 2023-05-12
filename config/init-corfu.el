@@ -6,6 +6,8 @@
   :custom
   ;; (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
   (corfu-auto t)                 ;; Enable auto completion
+  (corfu-auto-delay 0)
+  (corfu-auto-prefix 2)
   ;; (corfu-separator ?\s)          ;; Orderless field separator
   (corfu-quit-at-boundary 'separator)   ;; Quit at boundary if no `corfu-separator' has been inserted
   (corfu-quit-no-match 'separator)      ;; Only stay alive if there is no match and `corfu-separator' has been inserted
