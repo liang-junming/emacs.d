@@ -1,7 +1,7 @@
 ;;; package --- init
 ;;; Commentary:
 ;;; Code:
-(add-to-list 'image-types 'svg)
+;; (add-to-list 'image-types 'svg)
 
 (setq gc-cons-threshold most-negative-fixnum)
 (setq file-name-handler-alist nil)
