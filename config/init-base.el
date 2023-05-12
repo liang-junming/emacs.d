@@ -74,8 +74,8 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; 设置Mac meta键和super键
-;;(setq mac-option-modifier 'super
-;;      mac-command-modifier 'meta)
+(setq mac-option-modifier 'meta
+      mac-command-modifier 'super)
 
 (provide 'init-base)
 ;;; init-base.el ends here
