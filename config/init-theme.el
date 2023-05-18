@@ -11,7 +11,7 @@
   ;; (load-theme 'doom-one t)
   ;; (load-theme 'doom-monokai-spectrum t)
   ;; (load-theme 'doom-nord-light t)
-  (load-theme 'doom-one-light t)
+  (load-theme 'doom-monokai-classic t)
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
