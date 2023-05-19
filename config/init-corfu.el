@@ -67,7 +67,15 @@
   ;;(add-to-list 'completion-at-point-functions #'cape-dict)
   ;;(add-to-list 'completion-at-point-functions #'cape-symbol)
   ;;(add-to-list 'completion-at-point-functions #'cape-line)
+  :hook
+  (c-mode . (lambda () (setq completion-at-point-functions
+                             (list (cape-super-capf #'ggtags-completion-at-point #'cape-dabbrev #'cape-keyword) #'cape-file #'cape-dict))))
+  (emacs-lisp-mode . (lambda () (setq completion-at-point-functions
+                                      (list (cape-super-capf #'elisp-completion-at-point #'cape-dabbrev #'cape-keyword) #'cape-file #'cape-dict))))
+  (text-mode . (lambda () (setq completion-at-point-functions
+                                (list #'cape-dabbrev #'cape-file #'cape-dict))))
 )
+
 
 (provide 'init-corfu)
 ;;; init-corfu.el ends here
