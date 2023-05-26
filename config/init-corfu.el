@@ -70,6 +70,8 @@
   :hook
   (c-mode . (lambda () (setq completion-at-point-functions
                              (list (cape-super-capf #'ggtags-completion-at-point #'cape-dabbrev #'cape-keyword) #'cape-file #'cape-dict))))
+  (js2-mode . (lambda () (setq completion-at-point-functions
+                             (list (cape-super-capf #'ggtags-completion-at-point #'cape-dabbrev #'cape-keyword) #'cape-file #'cape-dict))))
   (emacs-lisp-mode . (lambda () (setq completion-at-point-functions
                                       (list (cape-super-capf #'elisp-completion-at-point #'cape-dabbrev #'cape-keyword) #'cape-file #'cape-dict))))
   (text-mode . (lambda () (setq completion-at-point-functions
