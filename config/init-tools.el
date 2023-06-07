@@ -80,15 +80,15 @@
   (which-key-mode))
 
 (use-package hungry-delete
-  :disabled
   :ensure t
   :hook ('prog-mode . 'global-hungry-delete-mode))
 
-(use-package smartparens
-  :ensure t
+(use-package smartparens-config
+  :ensure smartparens
   :config
-  (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
-  (add-hook 'prog-mode-hook 'smartparens-mode))
+  (show-smartparens-global-mode t)
+  (add-hook 'prog-mode-hook 'turn-on-smartparens-strict-mode)
+  (add-hook 'markdown-mode-hook 'turn-on-smartparens-strict-mode))
 
 (use-package mwim
   :ensure t

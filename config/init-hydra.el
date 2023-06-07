@@ -36,6 +36,21 @@
 ;;      (hydra-move/body)))
 
 (global-set-key
+ (kbd "C-(")
+ (defhydra hydra-pair (:color pink)
+   "pair"
+   ("a" sp-beginning-of-sexp "begin of sexp")
+   ("e" sp-end-of-sexp "end of sexp")
+   ("w" sp-forward-sexp "forward")
+   ("b" sp-backward-sexp "backward")
+   ("u" sp-backward-unwrap-sexp "unwrap")
+   ("l" sp-down-sexp "left in")
+   ("L" sp-backward-up-sexp "left out")
+   ("r" sp-backward-down-sexp "right in")
+   ("R" sp-up-sexp "Right out")
+   ("q" nil "quit")))
+
+(global-set-key
  (kbd "C-z")
  (defhydra hydra-vi (:pre (set-cursor-color "SteelBlue1")
                           :post (set-cursor-color "RoyalBlue2")
