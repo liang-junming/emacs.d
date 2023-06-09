@@ -28,6 +28,10 @@
 
 (add-to-list 'load-path "~/.emacs.d/config/")
 
+(add-to-list 'custom-theme-load-path
+             (file-name-as-directory "~/.emacs.d/themes"))
+
+
 (require 'init-base)
 ;;(require 'init-ivy-swiper-counsel)
 (require 'init-vertico-orderless-consult)
