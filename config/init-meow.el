@@ -116,7 +116,7 @@
                           (telega-chat-mode . normal)
                           (term-mode . normal)
                           (text-mode . normal)
-                          (vterm-mode . motion)
+                          (vterm-mode . insert)
                           (Custom-mode . normal)))
   :config
   (meow-setup)
