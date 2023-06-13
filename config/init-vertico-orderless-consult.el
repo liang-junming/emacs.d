@@ -4,9 +4,6 @@
 ;; 增强 minibuffer
 (use-package vertico
   :ensure t
-  :bind
-  (:map vertico-map (("TAB" . minibuffer-complete)
-                     ("?" . minibuffer-completion-help)))
   :config
   (vertico-mode)
 
@@ -30,8 +27,7 @@
   ;; Configure a custom style dispatcher (see the Consult wiki)
   ;; (setq orderless-style-dispatchers '(+orderless-consult-dispatch orderless-affix-dispatch)
   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
-  (setq completion-styles '(basic orderless)
-        orderless-matching-styles '(orderless-literal orderless-regexp orderless-flex)
+  (setq completion-styles '(orderless basic)
         completion-category-defaults nil
         completion-category-overrides '((file (styles partial-completion)))))
 

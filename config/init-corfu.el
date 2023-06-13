@@ -12,13 +12,14 @@
   (corfu-quit-at-boundary 'separator)   ;; Quit at boundary if no `corfu-separator' has been inserted
   (corfu-quit-no-match 'separator)      ;; Only stay alive if there is no match and `corfu-separator' has been inserted
   ;; (corfu-preview-current nil)    ;; Disable current candidate preview
-  (corfu-preselect 'prompt)      ;; Preselect the prompt
+  ;; (corfu-preselect 'promt)      ;; Preselect the prompt
   ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
   ;; (corfu-scroll-margin 5)        ;; Use scroll margin
   ;;(corfu-separator ?_) ;; Set to orderless separator, if not using space
   :bind
   ;; Another key binding can be used, such as S-SPC.
-  (:map corfu-map (("TAB" . corfu-complete)))
+  (:map corfu-map (("SPC" . corfu-insert-separator)
+                   ("<escape>" . corfu-quit)))
   :init
   (global-corfu-mode)
   :hook
