@@ -1,4 +1,3 @@
-
 ;;; package --- init-company
 ;;; Commentary:
 ;;; Code:
@@ -15,13 +14,13 @@
   (setq company-dabbrev-ignore-case t)
   (setq company-dabbrev-code-ignore-case t)
   (setq company-keywords-ignore-case t)
-  (setq company-backends '((company-gtags company-capf company-dabbrev-code company-keywords company-files)
+  (setq company-backends '((company-capf company-dabbrev-code company-keywords company-files)
                            company-dabbrev))
+  (if (equal my-lsp-client "ggtags")
+      (setq company-backends '((company-gtags company-capf company-dabbrev-code company-keywords company-files)
+                               company-dabbrev)))
   ;;:bind
   ;;(("C-c C-/" . company-other-backend))
-  :hook
-  (prog-mode . (lambda () (setq company-backends '((company-gtags company-dabbrev-code company-keywords company-files)))))
-  (emacs-lisp-mode . (lambda () (setq company-backends '((company-capf company-dabbrev-code company-keywords company-files)))))
   :config
   (global-company-mode))
 
@@ -29,16 +28,18 @@
   :ensure t
   :hook (company-mode . company-box-mode))
 
-(use-package flx
-  :ensure t)
+(if (equal my-lsp-client "ggtags")
+    (progn
+      (use-package flx
+        :ensure t)
 
-(use-package company-fuzzy
-  :ensure t
-  :hook (company-mode . company-fuzzy-mode)
-  :init
-  (setq company-fuzzy-sorting-backend 'flx
-        company-fuzzy-prefix-on-top nil
-        company-fuzzy-trigger-symbols '("." "->" "<" "\"" "'" "@")))
+      (use-package company-fuzzy
+        :ensure t
+        :hook (company-mode . company-fuzzy-mode)
+        :init
+        (setq company-fuzzy-sorting-backend 'flx
+              company-fuzzy-prefix-on-top nil
+              company-fuzzy-trigger-symbols '("." "->" "<" "\"" "'" "@")))))
 
 (provide 'init-company)
 ;;; init-company.el ends here

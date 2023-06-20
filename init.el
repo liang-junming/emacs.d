@@ -32,6 +32,8 @@
 (add-to-list 'custom-theme-load-path
              (file-name-as-directory "~/.emacs.d/themes"))
 
+(setq my-lsp-client "lsp-mode")
+
 (require 'init-base)
 ;;(require 'init-ivy-swiper-counsel)
 (require 'init-vertico-orderless-consult)
@@ -41,14 +43,16 @@
 (require 'init-company)
 (require 'init-tools)
 (require 'init-theme)
-;;(require 'init-eglot)
 (require 'init-lang-mode)
 (require 'init-flycheck)
 (require 'init-translate)
 (require 'init-meow)
-(require 'init-ggtags)
 (require 'init-term)
 (require 'init-hydra)
+(if (equal my-lsp-client "lsp-mode")
+    (require 'init-lsp))
+(if (equal my-lsp-client "ggtags")
+    (require 'init-ggtags))
 
 
 ;; 以下代码是emacs自动添加
@@ -58,7 +62,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(flx-rs hydra vterm cape kind-icon svg-lib meow go-translate flycheck typescript-mode js2-mode doom-modeline doom-themes smartparens hungry-delete which-key avy undo-tree goto-last-change try magit all-the-icons-dired all-the-icons dashboard embark-consult embark consult-projectile consult marginalia orderless vertico use-package)))
+   '(hydra vterm cape kind-icon svg-lib meow go-translate flycheck typescript-mode js2-mode doom-modeline doom-themes smartparens hungry-delete which-key avy undo-tree goto-last-change try magit all-the-icons-dired all-the-icons dashboard embark-consult embark consult-projectile consult marginalia orderless vertico use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

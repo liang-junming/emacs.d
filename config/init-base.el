@@ -77,5 +77,9 @@
 (setq mac-option-modifier 'meta
       mac-command-modifier 'super)
 
+(global-unset-key (kbd "M-?"))
+(global-set-key (kbd "M-[") 'xref-find-references)
+
+
 (provide 'init-base)
 ;;; init-base.el ends here
