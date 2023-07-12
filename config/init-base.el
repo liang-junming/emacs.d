@@ -4,8 +4,12 @@
 ;; 关闭工具栏
 (tool-bar-mode -1)
 
+;; 关闭菜单栏
+(menu-bar-mode -1)
+
 ;; 关闭滑动栏
-(scroll-bar-mode -1)
+(if (display-graphic-p)
+    (scroll-bar-mode -1))
 
 ;; 显示行号
 (global-linum-mode 1)
@@ -22,7 +26,8 @@
 ;;(set-face-attribute 'default nil :font "Courier New Bold 18")
 
 ;; 单独设置中文字体
-(set-fontset-font t 'han "Kaiti SC 18")
+(if (display-graphic-p)
+    (set-fontset-font t 'han "Kaiti SC 18"))
 
 ;; 设置光标颜色和样式
 ;; (setq-default cursor-type 'bar)
@@ -74,8 +79,9 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; 设置Mac meta键和super键
-(setq mac-option-modifier 'meta
-      mac-command-modifier 'super)
+(if (display-graphic-p)
+    (setq mac-option-modifier 'meta
+          mac-command-modifier 'super))
 
 (global-unset-key (kbd "M-?"))
 (global-set-key (kbd "M-[") 'xref-find-references)
