@@ -14,8 +14,8 @@
 ;;  ;; Emacs配置文件内容写到下面.
 ;;  )
 
-(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+(setq package-archives '(("gnu"   . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 (package-initialize)
 
@@ -46,7 +46,9 @@
 (require 'init-lang-mode)
 (require 'init-flycheck)
 (require 'init-translate)
-(require 'init-meow)
+(require 'init-chatgpt)
+;;(require 'init-meow)
+(require 'init-evil)
 (if (display-graphic-p)
     (require 'init-term))
 (require 'init-hydra)
@@ -63,7 +65,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(dap-java lsp-treemacs lsp-java hydra vterm cape kind-icon svg-lib meow go-translate flycheck typescript-mode js2-mode doom-modeline doom-themes smartparens hungry-delete which-key avy undo-tree goto-last-change try magit all-the-icons-dired all-the-icons dashboard embark-consult embark consult-projectile consult marginalia orderless vertico use-package)))
+   '(evil dap-java lsp-treemacs lsp-java hydra vterm cape kind-icon svg-lib go-translate flycheck typescript-mode js2-mode doom-modeline doom-themes smartparens hungry-delete which-key avy undo-tree goto-last-change try magit all-the-icons-dired all-the-icons dashboard embark-consult embark consult-projectile consult marginalia orderless vertico use-package))
+ '(warning-suppress-types '((comp) (comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

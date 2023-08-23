@@ -4,7 +4,9 @@
 (use-package vterm
   :ensure t
   :custom
-  (vterm-shell "/usr/local/bin/fish"))
+  (vterm-shell "/usr/local/bin/fish")
+  :bind (:map vterm-mode-map
+              ("<escape>" . vterm-copy-mode)))
 
 
 (provide 'init-term)
