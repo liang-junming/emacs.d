@@ -46,7 +46,7 @@
 (require 'init-lang-mode)
 (require 'init-flycheck)
 (require 'init-translate)
-(require 'init-chatgpt)
+;;(require 'init-chatgpt)
 ;;(require 'init-meow)
 (require 'init-evil)
 (if (display-graphic-p)
