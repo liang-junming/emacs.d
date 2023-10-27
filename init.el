@@ -14,8 +14,26 @@
 ;;  ;; Emacs配置文件内容写到下面.
 ;;  )
 
-(setq package-archives '(("gnu"   . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                         ("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+(setq package-archives '(
+                         ;; uncomment below line if you need use GNU ELPA
+                         ("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")
+                         ("melpa-stable" . "https://stable.melpa.org/packages/")
+
+                         ;; Use either 163 or tsinghua mirror repository when official melpa
+                         ;; is slow or shutdown.
+
+                         ;; ;; {{ Option 1: 163 mirror repository:
+                         ;; ("gnu" . "https://mirrors.163.com/elpa/gnu/")
+                         ;; ("melpa" . "https://mirrors.163.com/elpa/melpa/")
+                         ;; ("melpa-stable" . "https://mirrors.163.com/elpa/stable-melpa/")
+
+                         ;; ;; {{ Option 2: tsinghua mirror repository
+                         ;; ;; @see https://mirror.tuna.tsinghua.edu.cn/help/elpa/ on usage:
+                         ;; ("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ;; ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+                         ;; ("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
+                         ))
 
 (package-initialize)
 
@@ -65,7 +83,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(evil dap-java lsp-treemacs lsp-java hydra vterm cape kind-icon svg-lib go-translate flycheck typescript-mode js2-mode doom-modeline doom-themes smartparens hungry-delete which-key avy undo-tree goto-last-change try magit all-the-icons-dired all-the-icons dashboard embark-consult embark consult-projectile consult marginalia orderless vertico use-package))
+   '(lsp-mode evil dap-java lsp-treemacs lsp-java hydra vterm cape kind-icon svg-lib go-translate flycheck typescript-mode js2-mode doom-modeline doom-themes smartparens hungry-delete which-key avy undo-tree goto-last-change try magit all-the-icons-dired all-the-icons dashboard embark-consult embark consult-projectile consult marginalia orderless vertico use-package))
  '(warning-suppress-types '((comp) (comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
