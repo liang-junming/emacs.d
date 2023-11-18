@@ -12,7 +12,7 @@
     (scroll-bar-mode -1))
 
 ;; 显示行号
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
 
 ;; 高亮光标所在行
 (global-hl-line-mode +1)
@@ -21,13 +21,13 @@
 (save-place-mode 1)
 
 ;;pp 更改字体大小 15
-(set-face-attribute 'default nil :font "Courier 15")
+(set-face-attribute 'default nil :font "CourierNew Nerd Font Mono 20")
 ;; 加粗
 ;;(set-face-attribute 'default nil :font "Courier New Bold 18")
 
 ;; 单独设置中文字体
-(if (display-graphic-p)
-    (set-fontset-font t 'han "Kaiti SC 18"))
+;; (if (display-graphic-p)
+;;     (set-fontset-font t 'han "Kaiti SC"))
 
 ;; 设置光标颜色和样式
 ;; (setq-default cursor-type 'bar)
@@ -75,8 +75,24 @@
 ;; 去除默认启动界面
 (setq inhibit-startup-message nil)
 
-;; 窗口最大化
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;; 窗口大小
+;;(add-to-list 'default-frame-alist '(fullscreen . maximized))
+(setq default-frame-alist '((width . 120)
+                            (height . 40)))
+
+;; 窗口位置
+(defun center-frame ()
+  "Center the current frame on the screen."
+  (interactive)
+  (let* ((frame (selected-frame))
+         (width (frame-pixel-width frame))
+         (height (frame-pixel-height frame))
+         (pos-x (/ (- (x-display-pixel-width) width) 2))
+         (pos-y (/ (- (x-display-pixel-height) height) 2)))
+    (set-frame-position frame pos-x pos-y)))
+
+(add-hook 'window-setup-hook 'center-frame)
+
 
 ;; 设置Mac meta键和super键
 (if (display-graphic-p)

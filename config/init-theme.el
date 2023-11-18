@@ -12,8 +12,8 @@
   ;; (load-theme 'doom-monokai-spectrum t)
   ;; (load-theme 'doom-nord-light t)
   (if (display-graphic-p)
-      (load-theme 'doom-molokai t)
-    (load-theme 'dark-blue2 t))
+      (load-theme 'doom-solarized-light t)
+    (load-theme 'doom-solarized-light t))
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
