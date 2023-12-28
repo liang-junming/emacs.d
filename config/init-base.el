@@ -21,13 +21,13 @@
 (save-place-mode 1)
 
 ;;pp 更改字体大小 15
-(set-face-attribute 'default nil :font "CourierNew Nerd Font Mono 20")
+(set-face-attribute 'default nil :font "Courier 20")
 ;; 加粗
 ;;(set-face-attribute 'default nil :font "Courier New Bold 18")
 
 ;; 单独设置中文字体
-;; (if (display-graphic-p)
-;;     (set-fontset-font t 'han "Kaiti SC"))
+(if (display-graphic-p)
+    (set-fontset-font t 'han "Libian SC 24"))
 
 ;; 设置光标颜色和样式
 ;; (setq-default cursor-type 'bar)
