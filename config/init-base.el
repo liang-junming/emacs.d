@@ -77,8 +77,8 @@
 
 ;; 窗口大小
 ;;(add-to-list 'default-frame-alist '(fullscreen . maximized))
-(setq default-frame-alist '((width . 120)
-                            (height . 40)))
+(setq default-frame-alist '((width . 160)
+                            (height . 50)))
 
 ;; 窗口位置
 (defun center-frame ()
