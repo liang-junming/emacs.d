@@ -74,6 +74,7 @@
     (require 'init-lsp))
 (if (equal my-lsp-client "ggtags")
     (require 'init-ggtags))
+(require 'init-org)
 
 
 ;; 以下代码是emacs自动添加
