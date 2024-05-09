@@ -27,7 +27,7 @@
 
 ;; 单独设置中文字体
 (if (display-graphic-p)
-    (set-fontset-font t 'han "Libian SC 24"))
+    (set-fontset-font t 'han "Lantinghei SC 18"))
 
 ;; 设置光标颜色和样式
 ;; (setq-default cursor-type 'bar)
